@@ -6,13 +6,13 @@ This repository contains a machine learning pipeline and a detailed theoretical 
 
 ## Algorithm Overview
 
-* 1. **Text Cleaning & URL Parsing:** 
+1. **Text Cleaning & URL Parsing:** 
     The raw text is normalized by removing HTML artifacts, correcting encodings, and handling noisy characters. Embedded URLs are parsed to extract hidden contextual information, such as image 'alt' texts, domain names, and path-level keywords.
 
-* 2. **Feature Engineering:** 
+2. **Feature Engineering:** 
     The dataset is enriched with temporal and stylistic features. Publication times are converted into cyclic representations (sine/cosine) and day periods, while stylistic metrics like digit density, word counts, and title-to-article length ratios are computed.
 
-* 3. **Vectorization and Encoding:**
+3. **Vectorization and Encoding:**
     Heterogeneous data is processed using a ColumnTransformer. Textual components are independently vectorized using TF-IDF with custom domain-specific stopping words and sublinear term-frequency scaling. Categorical variables are one-hot encoded, and numerical features are standardized.
 
 4. **Classification:** 
